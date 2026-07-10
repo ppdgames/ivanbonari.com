@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ivan Bonari — Author</title>
+<link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">Ivan Bonari</a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">
+        <span class="lang-en">About</span><span class="lang-ru">Обо мне</span>
+      </a>
+      <a href="books.html">
+        <span class="lang-en">Books</span><span class="lang-ru">Книги</span>
+      </a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+        <span>/</span>
+        <button type="button" data-set-lang="ru" aria-pressed="false">RU</button>
+      </div>
+      <a href="https://ivanbonari.substack.com" class="subscribe-btn">
+        <span class="lang-en">Subscribe</span><span class="lang-ru">Подписаться</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap" style="padding-top:72px; padding-bottom:64px;">
+    <p class="status-line">
+      <span class="lang-en">status: writing — adventurers: act II</span>
+      <span class="lang-ru">статус: пишу — adventurers: акт II</span>
+    </p>
+    <h1 style="font-family:var(--font-display); font-weight:500; font-size:clamp(40px,6vw,72px); line-height:1.05; max-width:820px; margin:24px 0 0;">
+      <span class="lang-en">Professional pathological dreamer.</span>
+      <span class="lang-ru">Профессиональный патологический мечтатель.</span>
+    </h1>
+    <p style="max-width:600px; color:var(--mid); font-size:18px; margin-top:24px;">
+      <span class="lang-en">[ intro text about Ivan — take from the current site and lightly edit ]</span>
+      <span class="lang-ru">[ вступительный текст об Иване — возьмём с текущего сайта и слегка отредактируем ]</span>
+    </p>
+  </section>
+
+  <section class="wrap" style="padding-bottom:96px; border-top:1px solid var(--line); padding-top:64px;">
+    <p style="font-family:var(--font-mono); font-size:13px; text-transform:uppercase; letter-spacing:0.04em; color:var(--mid);">
+      <span class="lang-en">Latest release</span>
+      <span class="lang-ru">Последний релиз</span>
+    </p>
+    <h2 style="font-family:var(--font-display); font-weight:500; font-size:32px; margin-top:12px;">
+      <span class="lang-en">[ cover + description of Adventurers: Act I ]</span>
+      <span class="lang-ru">[ обложка + описание книги Adventurers: Act I ]</span>
+    </h2>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <p class="footer-tagline">
+        <span class="lang-en">Stories where worlds collide.</span>
+        <span class="lang-ru">Истории на стыке миров.</span>
+      </p>
+      <ul class="footer-links">
+        <li><a href="https://ivanbonari.substack.com">Substack</a></li>
+        <li><a href="https://www.amazon.com/dp/B0DY64TQGN">Amazon</a></li>
+        <li><a href="#">Goodreads</a></li>
+        <li><a href="#">Telegram</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ivan Bonari. <span class="lang-en">All rights reserved</span><span class="lang-ru">Все права защищены</span></span>
+      <a href="#"><span class="lang-en">Privacy policy</span><span class="lang-ru">Политика конфиденциальности</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  function getStored() {
+    try { return localStorage.getItem('ib-lang'); }
+    catch (e) { return null; }
+  }
+  function storeLang(l) {
+    try { localStorage.setItem('ib-lang', l); }
+    catch (e) { /* storage unavailable — ignore, switch still works this session */ }
+  }
+
+  var stored = getStored();
+  var browserLang = navigator.language && navigator.language.startsWith('ru') ? 'ru' : 'en';
+  var lang = stored || browserLang;
+
+  function setLang(l) {
+    document.documentElement.setAttribute('data-lang', l);
+    document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', btn.dataset.setLang === l ? 'true' : 'false');
+    });
+    storeLang(l);
+  }
+
+  setLang(lang);
+
+  document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      setLang(btn.dataset.setLang);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
