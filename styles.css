@@ -263,11 +263,12 @@ img { max-width: 100%; display: block; }
 }
 
 .avatar {
-  width: 160px;
-  height: 160px;
-  border-radius: 4px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  border: 1px solid var(--line);
 }
 
 .eyebrow {
@@ -382,7 +383,7 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 760px) {
-  .intro-row { flex-direction: column-reverse; }
+  .intro-row { flex-direction: column; }
   .release-row { flex-direction: column; }
   .release-cover { width: 160px; }
   .reviews-grid { grid-template-columns: 1fr; }
