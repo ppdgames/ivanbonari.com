@@ -80,6 +80,14 @@ img { max-width: 100%; display: block; }
   color: var(--brass);
 }
 
+.main-nav a.subscribe-btn {
+  color: var(--paper);
+}
+
+.main-nav a.subscribe-btn:hover {
+  color: var(--paper);
+}
+
 .main-nav a:hover {
   color: var(--brass);
 }
@@ -244,8 +252,12 @@ img { max-width: 100%; display: block; }
   margin-top: 32px;
 }
 
+.intro-content {
+  flex: 1;
+  min-width: 0;
+}
+
 .intro-text {
-  max-width: 600px;
   color: var(--mid);
   font-size: 17px;
 }
@@ -257,7 +269,6 @@ img { max-width: 100%; display: block; }
   font-style: italic;
   color: var(--ink);
   font-size: 20px;
-  max-width: 600px;
   margin: 24px 0 32px;
   line-height: 1.4;
 }
@@ -293,6 +304,11 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--line);
 }
 
+.release-body {
+  flex: 1;
+  min-width: 0;
+}
+
 .release-body h2 {
   font-family: var(--font-display);
   font-weight: 500;
@@ -304,7 +320,6 @@ img { max-width: 100%; display: block; }
   color: var(--mid);
   font-size: 16px;
   margin: 0 0 14px;
-  max-width: 580px;
 }
 
 .release-actions {
