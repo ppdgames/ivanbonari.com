@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --ink: #141311;
-  --paper: #f1ede4;
-  --line: #d9d3c4;
-  --mid: #726c5e;
-  --brass: #a67c3d;
+  --ink: #151515;
+  --paper: #f5f5f3;
+  --line: #dcdcdc;
+  --mid: #6e6e6e;
+  --hover-fill: #333333;
   --font-display: 'Fraunces', serif;
   --font-mono: 'JetBrains Mono', monospace;
   --font-body: 'Inter', sans-serif;
@@ -73,20 +73,22 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-mono);
   font-weight: 400;
   position: relative;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
 }
 
 .main-nav a[aria-current="page"] {
-  color: var(--brass);
+  border-bottom-color: var(--ink);
 }
 
 .main-nav a.subscribe-btn,
 .main-nav a.subscribe-btn:hover {
   color: var(--paper) !important;
+  border-bottom-color: transparent !important;
 }
 
-.main-nav a:hover {
-  color: var(--brass);
+.main-nav a:not(.subscribe-btn):hover {
+  border-bottom-color: var(--ink);
 }
 
 .lang-switch {
@@ -110,7 +112,7 @@ img { max-width: 100%; display: block; }
 
 .lang-switch button[aria-pressed="true"] {
   color: var(--ink);
-  border-bottom: 1px solid var(--brass);
+  border-bottom: 1px solid var(--ink);
 }
 
 .lang-switch span {
@@ -139,7 +141,7 @@ img { max-width: 100%; display: block; }
 }
 
 .subscribe-btn:hover {
-  background: var(--brass);
+  background: var(--hover-fill);
 }
 
 .nav-toggle {
@@ -196,8 +198,8 @@ img { max-width: 100%; display: block; }
 }
 
 .footer-links a:hover {
-  color: var(--brass);
-  border-bottom-color: var(--brass);
+  color: var(--ink);
+  border-bottom-color: var(--ink);
 }
 
 .footer-bottom {
@@ -219,30 +221,12 @@ img { max-width: 100%; display: block; }
 }
 
 .footer-bottom a:hover {
-  color: var(--brass);
+  color: var(--ink);
 }
 
 /* ---------- Status line (signature element) ---------- */
 
-.status-line {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  color: var(--mid);
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.status-line::before {
-  content: '';
-  width: 7px;
-  height: 7px;
-  background: var(--brass);
-  border-radius: 50%;
-  display: inline-block;
-}
+/* status-line removed — replaced by status-bars below */
 
 /* ---------- Status bars (signature element) ---------- */
 
@@ -262,9 +246,10 @@ img { max-width: 100%; display: block; }
 .status-bar-label {
   font-family: var(--font-mono);
   font-size: 12px;
-  letter-spacing: 0.05em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--brass);
+  color: var(--ink);
   flex-shrink: 0;
 }
 
@@ -291,7 +276,7 @@ img { max-width: 100%; display: block; }
 
 .status-bar-fill {
   height: 100%;
-  background: var(--brass);
+  background: var(--ink);
 }
 
 @media (max-width: 480px) {
@@ -404,13 +389,13 @@ img { max-width: 100%; display: block; }
   background: var(--ink);
   color: var(--paper);
 }
-.btn-solid:hover { background: var(--brass); }
+.btn-solid:hover { background: var(--hover-fill); }
 
 .btn-outline {
   border: 1px solid var(--ink);
   color: var(--ink);
 }
-.btn-outline:hover { border-color: var(--brass); color: var(--brass); }
+.btn-outline:hover { background: var(--ink); color: var(--paper); }
 
 .reviews-grid {
   display: grid;
