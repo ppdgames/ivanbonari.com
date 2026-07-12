@@ -80,12 +80,9 @@ img { max-width: 100%; display: block; }
   color: var(--brass);
 }
 
-.main-nav a.subscribe-btn {
-  color: var(--paper);
-}
-
+.main-nav a.subscribe-btn,
 .main-nav a.subscribe-btn:hover {
-  color: var(--paper);
+  color: var(--paper) !important;
 }
 
 .main-nav a:hover {
@@ -253,7 +250,6 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
   gap: 22px;
-  max-width: 640px;
 }
 
 .status-bar-head {
