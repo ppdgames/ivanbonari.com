@@ -82,11 +82,9 @@ img { max-width: 100%; display: block; }
   font-size: 13px;
 }
 
-.lang-switch button {
-  background: none;
-  border: none;
-  cursor: pointer;
+.lang-switch a {
   color: var(--mid);
+  text-decoration: none;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 13px;
@@ -94,17 +92,14 @@ img { max-width: 100%; display: block; }
   transition: opacity 0.15s ease;
 }
 
-.lang-switch button:hover { opacity: 0.6; }
+.lang-switch a:hover { opacity: 0.6; }
 
-.lang-switch button[aria-pressed="true"] {
+.lang-switch a.active {
   color: var(--ink);
   border-bottom: 2px solid var(--ink);
 }
 
 .lang-switch span { color: var(--line); }
-
-[data-lang="en"] .lang-ru { display: none; }
-[data-lang="ru"] .lang-en { display: none; }
 
 .subscribe-btn {
   font-family: var(--font-display);
