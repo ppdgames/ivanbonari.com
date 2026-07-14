@@ -42,6 +42,13 @@ img { max-width: 100%; display: block; }
 .site-header {
   border-bottom: 1px solid var(--line);
   background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+section[id] {
+  scroll-margin-top: 84px;
 }
 
 .site-header .wrap {
@@ -542,6 +549,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 760px) {
   .site-header .wrap { height: 64px; }
+  section[id] { scroll-margin-top: 64px; }
   .nav-links a { display: none; }
   .nav-actions { gap: 14px; }
   .subscribe-btn { padding: 9px 16px; font-size: 12px; }
