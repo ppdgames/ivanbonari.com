@@ -54,7 +54,20 @@ img { max-width: 100%; display: block; }
 .main-nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
   gap: 36px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .main-nav a {
@@ -529,8 +542,8 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 760px) {
   .site-header .wrap { height: 64px; }
-  .main-nav { gap: 18px; }
-  .main-nav a:not(.subscribe-btn) { display: none; }
+  .nav-links a { display: none; }
+  .nav-actions { gap: 14px; }
   .subscribe-btn { padding: 9px 16px; font-size: 12px; }
   .bio-row { flex-direction: column-reverse; gap: 32px; }
   .avatar { width: 160px; height: 160px; }
