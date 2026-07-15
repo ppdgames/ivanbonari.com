@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
 
 :root {
   --ink: #1c1c1e;
@@ -7,7 +7,7 @@
   --line: #e2e2e8;
   --mid: #55555c;
   --hover-fill: #333336;
-  --font-display: 'Poppins', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
   --maxw: 1120px;
 }
@@ -288,10 +288,9 @@ section[id] {
 .section-title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 34px;
-  margin: 0 0 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--ink);
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 24px;
 }
 
 /* ---------- Hero / About ---------- */
@@ -365,9 +364,9 @@ section[id] {
 
 .release-body h3 {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 28px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.25;
   margin: 0 0 18px;
 }
 
@@ -465,13 +464,6 @@ section[id] {
 /* ---------- Subscribe CTA ---------- */
 
 .subscribe-cta { text-align: center; padding: 64px 0; }
-
-.subscribe-cta h2 {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 30px;
-  margin: 0 0 12px;
-}
 
 .subscribe-cta p {
   color: var(--mid);
