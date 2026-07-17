@@ -336,13 +336,20 @@ section[id] {
 }
 .bio-text p { margin: 0 0 18px; }
 
+.avatar-frame {
+  display: inline-block;
+  flex-shrink: 0;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  padding: 1%;
+}
+
 .avatar {
+  display: block;
   width: 220px;
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  flex-shrink: 0;
-  border: 3px solid var(--ink);
 }
 
 /* ---------- Release / book entry ---------- */
@@ -354,10 +361,16 @@ section[id] {
   margin-top: 8px;
 }
 
-.release-cover {
-  width: 260px;
+.cover-frame {
+  display: inline-block;
   flex-shrink: 0;
   border: 1px solid var(--ink);
+  padding: 1%;
+}
+
+.release-cover {
+  display: block;
+  width: 260px;
 }
 
 .release-body { flex: 1; min-width: 0; }
