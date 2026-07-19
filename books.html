@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ivan Bonari — Books</title>
 <meta name="description" content="Explore Ivan Bonari's book series: Adventurers, Hunters, and more — sarcastic, fast-paced fantasy and sci-fi adventures.">
 <link rel="canonical" href="https://ivanbonari.com/books.html">
@@ -21,19 +21,25 @@
 <meta name="twitter:title" content="Books — Ivan Bonari">
 <meta name="twitter:description" content="Explore Ivan Bonari's book series: Adventurers, Hunters, and more.">
 <meta name="twitter:image" content="https://ivanbonari.com/assets/c_en_adv1.jpg">
-<link rel="stylesheet" href="styles.css?v=24">
+<link rel="stylesheet" href="styles.css?v=25">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
     <nav class="main-nav" aria-label="Primary">
-      <div class="nav-links">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="index.html"><span class="lang-en">About</span></a>
       <a href="#adventurers"><span class="lang-en">Adventurers</span></a>
       <a href="#hunters"><span class="lang-en">Hunters</span></a>
       <a href="#other"><span class="lang-en">Other</span></a>
-      </div>
+      <a href="https://ivanbonari.substack.com" class="subscribe-btn mobile-subscribe">
+        <span class="lang-en">Subscribe</span>
+      </a>
+            </div>
       <div class="nav-actions">
         <div class="lang-switch" role="group" aria-label="Language">
         <a href="books.html" class="active">EN</a>
@@ -229,5 +235,17 @@
 </footer>
 
 
+
+<script>
+(function () {
+  var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-links');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    var isOpen = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+})();
+</script>
 </body>
 </html>

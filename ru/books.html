@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Иван Веденеев — Книги</title>
 <meta name="description" content="Все книги Ивана Веденеева: «Приключенцы», «Охотники» и другие истории — стремительное саркастичное фэнтези и фантастика.">
 <link rel="canonical" href="https://ivanbonari.com/ru/books.html">
@@ -21,19 +21,25 @@
 <meta name="twitter:title" content="Книги — Иван Веденеев">
 <meta name="twitter:description" content="Все книги Ивана Веденеева: «Приключенцы», «Охотники» и другие истории.">
 <meta name="twitter:image" content="https://ivanbonari.com/assets/c_ru_adv1.jpg">
-<link rel="stylesheet" href="../styles.css?v=24">
+<link rel="stylesheet" href="../styles.css?v=25">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
     <nav class="main-nav" aria-label="Primary">
-      <div class="nav-links">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="index.html"><span class="lang-ru">Обо мне</span></a>
       <a href="#adventurers"><span class="lang-ru">Приключенцы</span></a>
       <a href="#hunters"><span class="lang-ru">Охотники</span></a>
       <a href="#other"><span class="lang-ru">Вне серий</span></a>
-      </div>
+      <a href="https://t.me/+tQfuL7aTuEg5OTAy" class="subscribe-btn mobile-subscribe">
+        <span class="lang-ru">Подписаться</span>
+      </a>
+            </div>
       <div class="nav-actions">
         <div class="lang-switch" role="group" aria-label="Language">
         <a href="../books.html">EN</a>
@@ -298,5 +304,17 @@
 </footer>
 
 
+
+<script>
+(function () {
+  var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-links');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    var isOpen = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+})();
+</script>
 </body>
 </html>

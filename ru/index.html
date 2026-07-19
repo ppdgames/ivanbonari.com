@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Иван Веденеев — Автор</title>
 <meta name="description" content="Иван Веденеев пишет стремительное, саркастичное фэнтези и фантастику на стыке реального мира и игровых вселенных. Читайте серию «Приключенцы» и подписывайтесь на бесплатные главы.">
 <link rel="canonical" href="https://ivanbonari.com/ru/">
@@ -21,19 +21,25 @@
 <meta name="twitter:title" content="Иван Веденеев — Профессиональный Патологический Мечтатель">
 <meta name="twitter:description" content="Стремительное, саркастичное фэнтези и фантастика на стыке реального мира и игровых вселенных.">
 <meta name="twitter:image" content="https://ivanbonari.com/assets/c_ru_lr.jpg">
-<link rel="stylesheet" href="../styles.css?v=24">
+<link rel="stylesheet" href="../styles.css?v=25">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
     <nav class="main-nav" aria-label="Primary">
-      <div class="nav-links">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="#about"><span class="lang-ru">Обо мне</span></a>
       <a href="#latest-release"><span class="lang-ru">Последний релиз</span></a>
       <a href="#reviews"><span class="lang-ru">Отзывы</span></a>
       <a href="books.html"><span class="lang-ru">Все книги</span></a>
-      </div>
+      <a href="https://t.me/+tQfuL7aTuEg5OTAy" class="subscribe-btn mobile-subscribe">
+        <span class="lang-ru">Подписаться</span>
+      </a>
+            </div>
       <div class="nav-actions">
         <div class="lang-switch" role="group" aria-label="Language">
         <a href="../index.html">EN</a>
@@ -224,5 +230,17 @@
 </footer>
 
 
+
+<script>
+(function () {
+  var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-links');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    var isOpen = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+})();
+</script>
 </body>
 </html>

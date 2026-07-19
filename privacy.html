@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ivan Bonari — Privacy Policy</title>
 <meta name="description" content="Privacy policy for ivanbonari.com — what visitor data this site touches, and what it doesn't.">
 <link rel="canonical" href="https://ivanbonari.com/privacy.html">
@@ -16,19 +16,23 @@
 <meta property="og:title" content="Privacy Policy — Ivan Bonari">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="ru_RU">
-<link rel="stylesheet" href="styles.css?v=24">
+<link rel="stylesheet" href="styles.css?v=25">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
     <nav class="main-nav" aria-label="Primary">
-      <div class="nav-links">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="index.html">About</a>
         <a href="index.html#latest-release">Latest release</a>
         <a href="index.html#reviews">Reviews</a>
         <a href="books.html">All books</a>
-      </div>
+      <a href="https://ivanbonari.substack.com" class="subscribe-btn mobile-subscribe">Subscribe</a>
+            </div>
       <div class="nav-actions">
         <div class="lang-switch" role="group" aria-label="Language">
           <a href="privacy.html" class="active">EN</a>
@@ -99,5 +103,17 @@
   </div>
 </footer>
 
+
+<script>
+(function () {
+  var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-links');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    var isOpen = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+})();
+</script>
 </body>
 </html>
