@@ -323,6 +323,8 @@ section[id] {
 
 .subscribe-btn:hover { background: var(--hover-fill); }
 
+.mobile-subscribe { display: none; }
+
 /* ---------- Footer ---------- */
 
 .site-footer {
