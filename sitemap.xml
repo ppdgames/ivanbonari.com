@@ -30,4 +30,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanbonari.com/books.html"/>
   </url>
 
+<url>
+  <loc>https://ivanbonari.com/texts/thetavern.html</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://ivanbonari.com/texts/thetavern.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanbonari.com/texts/thetavern.html"/>
+</url>
+
 </urlset>
