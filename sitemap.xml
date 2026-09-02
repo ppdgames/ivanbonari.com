@@ -36,4 +36,16 @@
   <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanbonari.com/texts/thetavern.html"/>
 </url>
 
+<url>
+  <loc>https://ivanbonari.com/texts/thesaloon.html</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://ivanbonari.com/texts/thesaloon.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanbonari.com/texts/thesaloon.html"/>
+</url>
+
+<url>
+  <loc>https://ivanbonari.com/ru/stories/hotdaybd.html</loc>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://ivanbonari.com/ru/stories/hotdaybd.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanbonari.com/ru/stories/hotdaybd.html"/>
+</url>
+
 </urlset>
